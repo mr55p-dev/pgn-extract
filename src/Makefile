@@ -53,7 +53,7 @@ AIX_CFLAGS=-c -D_POSIX_SOURCE -D_XOPEN_SOURCE -D_ALL_SOURCE
 AIX_CC=xlc
 
 pgn-extract : $(OBJS)
-	$(CC) $(DEBUGINFO) $(ORIGCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(OBJS) $(LIBS) -o pgn-extract
+	$(CC) $(DEBUGINFO) $(ORIGCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(OBJS) $(LIBS) -o ../pgn-extract
 
 purify : $(OBJS)
 	purify $(CC) $(DEBUGINFO) $(OBJS) -o pgn-extract
