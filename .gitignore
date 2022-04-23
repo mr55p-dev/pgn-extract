@@ -1,3 +1,4 @@
 pgn-extract
 pgn-extract/*
 *.o
+pgn-extract-xcodeproject/*

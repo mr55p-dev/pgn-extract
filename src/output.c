@@ -413,11 +413,13 @@ print_separator(FILE *fp)
     /* Lines shouldn't have trailing spaces, so ensure that there
      * will be room for at least one more character after the space.
      */
-    check_line_length(fp, 2);
-    if (line_length != 0 && output_line[line_length - 1] != ' ') {
-        output_line[line_length] = ' ';
-        line_length++;
-    }
+    check_line_length(fp, 1);
+    output_line[line_length] = ' ';
+    line_length ++;
+//    if (line_length != 0 && output_line[line_length - 1] != ' ') {
+//        output_line[line_length] = ' ';
+//        line_length++;
+//    }
 }
 
 /* Ensure that what comes next starts on a fresh line. */
@@ -425,9 +427,9 @@ void
 terminate_line(FILE *fp)
 {
     /* Delete any trailing space(s). */
-    while (line_length >= 1 && output_line[line_length - 1] == ' ') {
-        line_length--;
-    }
+//    while (line_length >= 1 && output_line[line_length - 1] == ' ') {
+//        line_length--;
+//    }
     if (line_length > 0) {
         output_line[line_length] = '\0';
         fprintf(fp, "%s\n", output_line);
